@@ -90,10 +90,8 @@ func main() {
 
 	start := time.Now()
 
-	// Call quicksort with a depth limit equal to the number of available CPUs
 	go QuickSort(arr, &wg, numCPU)
 
-	// Wait for the sorting to complete
 	wg.Wait()
 
 	elapsed := time.Since(start)
